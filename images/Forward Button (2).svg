@@ -1,0 +1,12 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Forward Button" clip-path="url(#clip0_2_10)">
+<circle id="Outer-border" cx="64" cy="64" r="61" transform="rotate(180 64 64)" stroke="#4B4B4B" stroke-width="6"/>
+<path id="Small-triangle" d="M108 64L68.25 86.5167L68.25 41.4833L108 64Z" fill="#C8C8C8"/>
+<path id="Big-triangle" d="M90 64L37.5 94.3109L37.5 33.6891L90 64Z" fill="#C8C8C8"/>
+</g>
+<defs>
+<clipPath id="clip0_2_10">
+<rect width="128" height="128" fill="white" transform="translate(128 128) rotate(180)"/>
+</clipPath>
+</defs>
+</svg>

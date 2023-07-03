@@ -1,0 +1,291 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@font-face {
+  font-family: 'norsebold';
+  src: url('./fonts/norse-bold-webfont.woff') format('woff'),
+  url('./fonts/norse-bold-webfont.woff2') format('woff2');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-logo-family: 'norsebold', sans-serif, var(--system-ui);
+  --font-logo-weight: bold;
+  --font-logo-size: clamp(3rem, calc(4rem + 5vw), 16rem);
+  --font-logo-letter-spacing: 0.2rem;
+  --font-logo-line-height: 1.3;
+  --font-login-size: clamp(1.2rem, 1.4rem, 1.6rem);;
+
+  --logo-height: clamp(4vh, 95%, 16vh);
+
+  --font-lg: calc(1rem + 2vw);
+  --font-size-med: calc(0.8rem + 0.75vw);
+  --font-size-small: calc(0.8rem + 0.25vw);
+
+  --aside-bg-clr: rgb(0, 0, 0, 0.7);
+  --btn-bg-clr: rgb(89, 109, 72);
+  --btn-hvr-bg-clr: rgb(89, 175, 72);
+  --secondary-content-bg-clr: rgb(229, 231, 235);
+  --progress-bar-bg-clr: rgb(123, 128, 135);
+  --progress-bar-clr: rgb(151, 26, 223);
+  --label-clr: rgb(156, 175, 168);
+  --required-clr: rgb(215, 76, 53);
+
+  --link-text-clr:rgb(151, 223, 26);
+  --logo-text-clr: rgb(255, 255, 255);
+
+  --inset-shadow: inset 0 0 2rem 2rem rgb(0, 0, 0, 0.3);
+  --main-bg-box-shadow: 0 10px 12px 8px rgb(0, 0, 0, 0.3);
+  --input-box-shadow: 0 2px 8px 2px rgb(0, 0, 0, 0.1);
+
+  --secondary-content-position: 5rem;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif, var(--system-ui);
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main, 
+aside {
+  height: 100%;
+}
+
+aside {
+  flex: 35;
+
+  background-image: url(./images/Mitch-Lally-Original.jpg);
+  background-position: center;
+  background-size: cover;
+
+  box-shadow: var(--inset-shadow)
+}
+
+main,
+.aside-content,
+.logo-content,
+.logo-img,
+.content-text,
+.main-text-bg,
+.main-form-bg,
+.main-btn-bg,
+.input-wrapper,
+.input-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-content {
+  flex-direction: column;
+
+  height: clamp(20vh, 25vh, 30vh);
+  width: 95%;
+
+  margin: 0 auto;
+  margin-top: max(12rem, 25vh);
+
+  background-color: var(--aside-bg-clr);
+  border-radius: calc(2em + 2vw);
+}
+
+.logo-content {
+  height: 80%;
+  width: 90%;
+
+  flex: 80;
+}
+
+.logo-img,
+.content-text {
+  height: 100%;
+  flex: 1;
+}
+
+.content-text {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-img img {
+  height: var(--logo-height);
+}
+
+.logo-text {
+  font-family: var(--font-logo-family);
+  font-size: var(--font-logo-size);
+  font-weight: var(--font-logo-weight);
+  letter-spacing: var(--font-logo-letter-spacing);
+  line-height: var(--font-logo-line-height);
+  color: var(--logo-text-clr);
+}
+
+.login-text {
+  font-size: var(--font-login-size);
+  color: var(--logo-text-clr);
+  font-weight: bold;
+}
+
+.login-text a {
+  text-decoration: none;
+  color: var(--link-text-clr);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.login-text a:hover {
+  cursor: pointer;
+  color: var(--btn-hvr-bg-clr)
+}
+
+main {
+  flex: 65;
+  flex-direction: column;
+}
+
+.main-text-bg,
+.main-form-bg,
+.main-progress-bar,
+.main-btn-bg {
+  height: 100%;
+  width: 100%;
+}
+
+.main-text-bg,
+.main-btn-bg {
+  height: 100%;
+  flex: 33;
+  background-color: var(--secondary-content-bg-clr);
+}
+
+.main-form-bg,
+.main-progress-bar-bg {
+  box-shadow: var(--main-bg-box-shadow);
+  z-index: 1;
+}
+
+.main-form-bg {
+  flex: 32;
+}
+
+.main-progress-bar-bg {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  background-color: var(--progress-bar-bg-clr);
+}
+
+.main-text-content {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.main-text-content p {
+  width: 50ch;
+  font-size: var(--font-size-med);
+  font-weight: bold;
+  letter-spacing: 0.15ch;
+}
+
+.main-text-content p:last-child {
+  margin: 1.8rem 0 3.7rem 0;
+}
+
+.main-form-content {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.main-form-header,
+.main-form {
+  width: 80%;
+}
+
+.main-form-header {
+  flex: 20;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-form {
+  flex: 80;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.input-wrapper,
+.input-content {
+  flex: 1;
+  width: 100%;
+}
+
+.input-wrapper {
+  gap: 2rem;
+}
+
+.input-content {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+h2 {
+  font-size: var(--font-size-med);
+}
+
+label {
+  font-size: var(--font-size-small);
+  color: var(--label-clr);
+}
+
+input {
+  width: 33ch;
+  padding: 0.4em;
+
+  font-size: var(--font-size-small);
+  font-weight: 700;
+
+  border: none;
+  border-bottom: 2px solid var(--label-clr);
+  border-radius: 0.5em;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--progress-bar-clr);
+}
+
+input:focus:invalid {
+  border-bottom: 2px solid var(--required-clr);
+}
+
+input:required:invalid {
+  border-bottom: 2px solid var(--required-clr);
+}
+
+input:required:valid {
+  border-bottom: 2px solid var(--link-text-clr);
+}

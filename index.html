@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Sign Up Form</title>
+</head>
+<body>
+
+  <aside>
+    <div class="aside-content">
+      <div class="logo-content">
+        <div class="logo-img"><img src="./images/odin-lined.png" alt="Odin Logo"></div>
+        <div class="content-text">
+          <p class="logo-text">ODIN</p>
+          <p class="login-text">Already have an Account? <a href="#">Log In</a></p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="main-text-bg">
+      <div class="main-text-content">  
+        <p>
+          This is not a real online service. You need something like this in your life to help you realise your deepest dreams.
+        </p>
+        <p>
+          Sign up <em>now</em> to get started.
+        </p>
+        <p>
+          You <em>know</em> you want to.
+        </p>
+      </div>
+    
+    </div>
+
+    <div class="main-form-bg">
+      <div class="main-form-content">     
+        <div class="main-form-header">
+          <h2>Let's do this!</h2>
+        </div>
+
+        <div class="main-form">
+
+          <form action="" class="main-form">
+
+            <div class="input-wrapper">
+              <div class="input-content">
+                <label for="fname">FIRST NAME: </label>
+                <input
+                type="text" 
+                minlength="3" 
+                maxlength="25" 
+                placeholder="John" 
+                pattern="^[A-Z].*"
+                id="fname"
+                name="fname">
+              </div>
+
+              <div class="input-content">
+                <label for="lname">LAST NAME: </label>
+                <input 
+                type="text"
+                minlength="3"
+                maxlength="25"
+                placeholder="Smith"
+                pattern="^[A-Z].*"
+                id="lname"
+                name="lname">
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="input-content">
+                <label for="email">EMAIL: </label>
+                <input 
+                type="email"
+                placeholder="example@example.com"
+                id="email"
+                name="email">
+              </div>
+
+              <div class="input-content">
+                <label for="tel">PHONE NUMBER: </label>
+                <input 
+                type="tel"
+                id="number"
+                name="number">
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="input-content">
+                <label for="password">PASSWORD: </label>
+                <input type="password"
+                minlength="8"
+                maxlength="15"
+                id="password"
+                name="pword"
+                required>
+              </div>
+
+              <div class="input-content">
+                <label for="pconf">CONFIRM PASSWORD: </label>
+                <input type="password" 
+                minlength="8"
+                maxlength="15"
+                id="pconf"
+                name="pconf"
+                required>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="main-progress-bar-bg"></div>
+
+    <div class="main-btn-bg"></div>
+
+  </main>
+</body>
+</html>

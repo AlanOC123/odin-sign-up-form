@@ -45,9 +45,9 @@
           <h2>Let's do this!</h2>
         </div>
 
-        <div class="main-form">
+        <div class="main-form" data-forms-filled="0">
 
-          <form action="" class="main-form">
+          <form action="" class="main-form" id="form">
 
             <div class="input-wrapper">
               <div class="input-content">
@@ -59,7 +59,11 @@
                 placeholder="John" 
                 pattern="^[A-Z].*"
                 id="fname"
-                name="fname">
+                name="fname"
+                data-is-valid="false"
+                class="invalid"
+                required>
+                <span>*Required</span>
               </div>
 
               <div class="input-content">
@@ -71,7 +75,10 @@
                 placeholder="Smith"
                 pattern="^[A-Z].*"
                 id="lname"
-                name="lname">
+                name="lname"
+                data-is-valid="false"
+                required>
+                <span> *Required</span>
               </div>
             </div>
 
@@ -82,15 +89,41 @@
                 type="email"
                 placeholder="example@example.com"
                 id="email"
-                name="email">
+                name="email"
+                data-is-valid="false"
+                pattern="^(\S+)@(\S+)\.(\S+)$"
+                minlength="10"
+                maxlength="75"
+                required>
+                <span> *Required</span>
               </div>
 
               <div class="input-content">
                 <label for="tel">PHONE NUMBER: </label>
-                <input 
-                type="tel"
-                id="number"
-                name="number">
+                <div class="number-input">
+                  <select name="area-code" id="area-code" required>
+                    <option value="AU">+61</option>
+                    <option value="CA">+1</option>
+                    <option value="DE">+49</option>
+                    <option value="IE" selected>+353</option>
+                    <option value="PL">+48</option>
+                    <option value="GB">+44</option>
+                    <option value="US">+1</option>
+                  </select>
+                  <div class="number-content">
+                    <input 
+                    type="tel"
+                    id="number"
+                    name="number"
+                    pattern="^[1-9]{1}\d+"
+                    minlength="7"
+                    maxlength="15"
+                    data-is-valid="false"
+                    required>
+                    <span> *Required</span>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -99,20 +132,25 @@
                 <label for="password">PASSWORD: </label>
                 <input type="password"
                 minlength="8"
-                maxlength="15"
+                maxlength="20"
                 id="password"
                 name="pword"
+                pattern="[A-Z]+[a-z]+\W+\d+"
+                data-is-valid="false"
                 required>
+                <span> *Required</span>
               </div>
 
               <div class="input-content">
                 <label for="pconf">CONFIRM PASSWORD: </label>
                 <input type="password" 
                 minlength="8"
-                maxlength="15"
+                maxlength="20"
                 id="pconf"
                 name="pconf"
+                data-is-valid="false"
                 required>
+                <span> *Required</span>
               </div>
             </div>
 
@@ -122,9 +160,19 @@
 
     </div>
 
-    <div class="main-progress-bar-bg"></div>
+    <div class="main-progress-bar-bg">
+      <div class="progress-bar"></div>
+    </div>
 
-    <div class="main-btn-bg"></div>
+    <div class="main-btn-bg">
+      <div class="main-btn">
+        <button 
+        type="submit" 
+        id="btn" 
+        form="form"
+        disabled>Create Account</button>
+      </div>
+    </div>
 
   </main>
 </body>
